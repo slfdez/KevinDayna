@@ -3299,14 +3299,36 @@ button.next:hover {
 .owl-carousel .item {
     position: relative;
     padding: 15px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    min-height: 350px; /* Ajusta según necesidad */
 }
 
-.owl-carousel .item img {
-    width: 100%;
-    border-radius: 10px;
+
+.owl-dots {
+    text-align: center;
+    margin-top: 15px; /* Ajusta la distancia */
+    position: relative; /* Puedes modificarlo a absolute si necesitas ubicarlo en otro lado */
 }
+
+.owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background: #ccc; /* Color predeterminado */
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.owl-dot.active {
+    background: #4CAF50; /* Color del indicador activo */
+}
+
+
