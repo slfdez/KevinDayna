@@ -255,11 +255,8 @@
                                     </div>
 
                                     <br><br>
-                                    <div class="button-container">
-                                        <button class="prev">Previo</button>
-                                        <button class="next">Siguiente</button>
-                                    </div>
-                                </div>
+                                    <button class="carousel-nav prev">&#10094;</button>
+                                    <button class="carousel-nav next">&#10095;</button>
 
 
 
@@ -653,6 +650,41 @@
         });
 
     });
+
+</script>
+
+<script>
+    $(document).ready(function () {
+    var owl = $(".owl-carousel");
+
+    owl.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false, // Desactiva los botones predeterminados de Owl
+        dots: true, // Puedes mantener los puntos de navegación si quieres
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+
+    // Hacer que las nuevas flechas funcionen
+    $(".prev").click(function () {
+        owl.trigger("prev.owl.carousel");
+    });
+
+    $(".next").click(function () {
+        owl.trigger("next.owl.carousel");
+    });
+});
+
 
 </script>
 
