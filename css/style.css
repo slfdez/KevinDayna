@@ -3029,7 +3029,7 @@ button.next {
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
-    margin: 5px;
+    margin: -25px;
     /* Espaciado entre los botones */
 }
 
