@@ -125,10 +125,12 @@
         }
     });
     
-    // Close navbar-collapse when a  clicked
-    $(".navbar-nav .dropdown-item a").on('click', function () {
-        $(".navbar-collapse").removeClass("show");
+    $(document).ready(function () {
+        $(".navbar-nav .nav-link").on("click", function () {
+            $(".navbar-collapse").collapse("hide");
+        });
     });
+    
     
     // Sections background image from data background
     var pageSection = $(".bg-img, section");
